@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Welcome to Wandering!</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
 
