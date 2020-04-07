@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome to Wandering!</title>
+	<title>Welcome to Wandering?</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
@@ -10,7 +10,7 @@
 		<div class="mainSection">
 			
 			<div class="logoContainer">
-				<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+				<img src="assets/images/wandering.png">
 			</div>
 
 			<div class="searchContainer">
