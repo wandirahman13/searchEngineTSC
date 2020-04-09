@@ -15,7 +15,7 @@
 
 			<div class="searchContainer">
 				<form action="search.php" method="GET">
-					<input class="searchBox" type="text" name="term" placeholder="Enter a keyword here...">
+					<input class="searchBox" type="text" name="term" autofocus="autofocus" placeholder="Type a keyword here...">
 					<input class="searchButton" type="submit" value="Search">
 				</form>
 			</div>
