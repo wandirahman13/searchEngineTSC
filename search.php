@@ -6,7 +6,7 @@
 </head>
 <body>
 
-	<div class="wrapper indexPage">
+	<div class="wrapper">
 		
 		<div class="header">
 			
