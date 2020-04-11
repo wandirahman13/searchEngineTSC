@@ -43,7 +43,7 @@
 			</div>
 
 			<div class="tabsContainer">
-				<ul class="tabList">
+				<ul class="tabsList">
 					<li>
 						<a href='<?php echo "search.php?term=$term&type=sites"; ?>'>
 							Sites
