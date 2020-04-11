@@ -1,10 +1,14 @@
 <?php
+
 	if(isset($_GET["term"])) {
 		$term = $_GET["term"];
 	}
 	else {
 		exit("you must enter a search term");
 	}
+
+	$type = isset($_GET["type"]) ? $_GET["type"] : "sites";
+
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +48,7 @@
 
 			<div class="tabsContainer">
 				<ul class="tabsList">
-					<li>
+					<li class="<?php echo $type == 'sites' ? 'active' : '' ?>">
 						<a href='<?php echo "search.php?term=$term&type=sites"; ?>'>
 							Sites
 						</a>
