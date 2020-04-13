@@ -6,9 +6,17 @@ function followLinks($url){
 	
 	$parser = new DomDocumentParser($url);
 
+	$linkList = $parser->getLinks();
+
+	foreach ($linkList as $link) {
+		# code...
+		$href = $link->getAttribute("href");
+		echo $href . "<br>";
+	}
+
 }
 
-$startUrl = "https://go-jek.atlassian.net/wiki/spaces/OBS/pages/1589346430/SOP+-+Mandiri+-+Payment+Channel+Offline+-+Level+4"; 
+$startUrl = "https://docs.google.com/document/d/1TzQU6vxeQJt3UHB7UuYbyTZdxhMMwPxpR-Y7BFXXm8s/edit"; 
 followLinks($startUrl);
 
  ?>
