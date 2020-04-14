@@ -10,6 +10,7 @@ include("classes/SiteResultsProvider.php");
 	}
 
 	$type = isset($_GET["type"]) ? $_GET["type"] : "sites";
+	$page = isset($_GET["page"]) ? $_GET["page"] : 1;
 
 ?>
 
@@ -69,12 +70,13 @@ include("classes/SiteResultsProvider.php");
 			
 			<?php
 				$resultsProvider = new SiteResultsProvider($con);
+				$pageLimit = 10;
 
 				$numResults = $resultsProvider->getNumResults($term);
 
 				echo "<p class='resultsCount'>$numResults results found</p>";
 
-				echo $resultsProvider->getResultsHtml(1, 20, $term);
+				echo $resultsProvider->getResultsHtml($page, $pageLimit, $term);
 			?>
 
 
