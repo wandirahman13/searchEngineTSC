@@ -54,6 +54,9 @@ class SiteResultsProvider {
 			$source = $row["source"];
 			$level = $row["level"];
 
+			$url = $this->trimField($url, 88);
+			$description = $this->trimField($description, 55);
+
 			$resultsHtml .= "<div class='resultsContainer'>
 
 								<h3 class='title'>
@@ -76,6 +79,11 @@ class SiteResultsProvider {
 		$resultsHtml .= "</div>";
 
 		return $resultsHtml;
+	}
+
+	private function trimField($string, $charLimit) {
+		$dots = strlen($string) > $charLimit ? "..." : "";
+		return substr($string, 0, $charLimit) . $dots;
 	}
 
 
