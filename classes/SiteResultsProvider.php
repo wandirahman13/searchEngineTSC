@@ -34,7 +34,8 @@ class SiteResultsProvider {
 										OR url LIKE :term
 										OR keywords LIKE :term
 										OR description LIKE :term
-										OR entity LIKE :term");
+										OR entity LIKE :term
+										ORDER BY clicks DESC");
 
 		$searchTerm = "%" . $term . "%";
 		$query->bindParam(":term", $searchTerm);
@@ -60,10 +61,10 @@ class SiteResultsProvider {
 										$title
 									</a>
 								</h3>
-								<span class='url'>$url</span></br>
-								<span class='description'>$description</span></br>
-								<span class='level'>Level : $level</span></br>
-								<span class='entity'>Entity : $entity</span></br>
+								<span class='url'>$url</span>
+								<span class='description'>$description</span>
+								<span class='level'>Level : $level</span>
+								<span class='entity'>Entity : $entity</span>
 								<span class='source'>Source : $source</span>
 
 							</div>";
