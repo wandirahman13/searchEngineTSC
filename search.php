@@ -19,6 +19,7 @@ include("classes/SiteResultsProvider.php");
 <head>
 	<title>Welcome to Wandering?</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -104,6 +105,10 @@ include("classes/SiteResultsProvider.php");
 					$currentPage = 1;
 				}
 
+				if($currentPage + $pagesLeft > $numPages + 1){
+					$currentPage = $numPages + 1 - $pagesLeft;
+				}
+
 				while($pagesLeft != 0 && $currentPage <= $numPages){
 
 					if($currentPage == $page){
@@ -142,6 +147,6 @@ include("classes/SiteResultsProvider.php");
 
 
 	</div>
-
+	<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
