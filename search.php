@@ -98,13 +98,13 @@ include("classes/SiteResultsProvider.php");
 				$numPages = ceil($numResults / $pageLimit);
 				$pagesLeft = min($pagesToShow, $numPages);
 
-				$currentPages = $page - floor($pagesToShow / 2);
+				$currentPage = $page - floor($pagesToShow / 2);
 
-				if ($currentPages <1){
+				if ($currentPage <1){
 					$currentPage = 1;
 				}
 
-				while($pagesLeft!=0){
+				while($pagesLeft != 0 && $currentPage <= $numPages){
 
 					if($currentPage == $page){
 						echo "<div class='pageNumberContainer'>
