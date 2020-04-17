@@ -94,9 +94,15 @@ include("classes/SiteResultsProvider.php");
 
 
 				<?php
+				$pagesToShow = 10;
+				$numPages = ceil($numResults / $pageLimit);
+				$pagesLeft = min($pagesToShow, $numPages);
 
-				$currentPage = 1;
-				$pagesLeft = 10;
+				$currentPages = $page - floor($pagesToShow / 2);
+
+				if ($currentPages <1){
+					$currentPage = 1;
+				}
 
 				while($pagesLeft!=0){
 
