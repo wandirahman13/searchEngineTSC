@@ -218,15 +218,19 @@ body {
 }
 
 .resultsContainer .description {
-	font-size: 14px;
+	font-size: 16px;
+	color: #4d5156;
 }
 .resultsContainer .level {
-	font-size: 14px;
+	font-size: 16px;
+	color: #4d5156;
 }.resultsContainer .entity {
-	font-size: 14px;
+	font-size: 16px;
+	color: #4d5156;
 }
 .resultsContainer .source {
-	font-size: 14px;
+	font-size: 16px;
+	color: #4d5156;
 }
 
 .paginationContainer {
@@ -243,7 +247,8 @@ body {
 	height: 37px;
 }
 
-.pageNumberContainer {
+.pageNumberContainer,
+.pageNumberContainer a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -253,4 +258,8 @@ body {
 .pageNumber {
 	color: #000;
 	font-size: 13px;
+}
+
+a .pageNumber {
+	color: #4285f4;
 }

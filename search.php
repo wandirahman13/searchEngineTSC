@@ -99,10 +99,21 @@ include("classes/SiteResultsProvider.php");
 				$pagesLeft = 10;
 
 				while($pagesLeft!=0){
-					echo "<div class='pageNumberContainer'>
+
+					if($currentPage == $page){
+						echo "<div class='pageNumberContainer'>
 							<img src='assets/images/selected.png'>
 							<span class='pageNumber'>$currentPage</span>
 						 </div>";
+					}
+					else {
+						echo "<div class='pageNumberContainer'>
+								<a href='search.php?term=$term&type=$type&page=$currentPage'>
+									<img src='assets/images/notSelected.png'>
+									<span class='pageNumber'>$currentPage</span>
+								</a>
+						 </div>";
+					}
 
 				$currentPage++;
 				$pagesLeft--;
